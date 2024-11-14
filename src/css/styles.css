@@ -5,14 +5,80 @@
   |============================
 */
 /* Common styles */
-@import url('./reset.css');
+/* @import url('./reset.css');
 @import url('./base.css');
 @import url('./container.css');
-@import url('./animations.css');
+@import url('./animations.css'); */
 
 /* Sections style */
-@import url('./header.css');
+/* @import url('./header.css');
 @import url('./vite-promo.css');
 @import url('./badges.css');
 @import url('./back-link.css');
-@import url('./footer.css');
+@import url('./footer.css'); */
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  text-align: center;
+  margin: 20px;
+}
+
+#search-form input {
+  padding: 8px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  outline: none;
+  width: 272px;
+  transition: border-color 0.3s;
+
+  font-size: 16px;
+  color: #808080;
+}
+
+#search-form input:hover {
+  border: 1px solid #000;
+}
+
+#search-form input:focus {
+  border: 1px solid #4e75ff;
+  color: #2e2f42;
+}
+
+#search-form button {
+  border-radius: 8px;
+  padding: 8px 16px;
+  margin-left: 8px;
+  background-color: #4e75ff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  font-size: 16px;
+  color: #fff;
+}
+
+#search-form button:hover {
+  background-color: #6c8cff;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 20px;
+}
+
+.image-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.loader {
+  display: none;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
