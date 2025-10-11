@@ -3,7 +3,7 @@ import axios from 'axios';
 const BASE_URL = 'https://pixabay.com/api/';
 const API_KEY = '47040317-0d9018ce78b59a4267667365b';
 
-export async function getImagesByQuery(query) {
+export function getImagesByQuery(query) {
   const params = {
     key: API_KEY,
     q: query,
@@ -12,6 +12,11 @@ export async function getImagesByQuery(query) {
     safesearch: 'true',
   };
 
-  const response = await axios.get(BASE_URL, { params });
-  return response.data;
+  return axios
+    .get(BASE_URL, { params })
+    .then(response => response.data)
+    .catch(error => {
+      console.error('Error fetching images:', error);
+      throw error;
+    });
 }
