@@ -109,6 +109,9 @@ body {
   border-radius: 50%;
   position: relative;
   animation: rotate 1s linear infinite;
+
+  margin: 20px auto 0;
+  display: block;
 }
 .loader::before,
 .loader::after {
@@ -151,6 +154,23 @@ body {
   100% {
     clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
   }
+}
+
+.load-more {
+  margin: 30px auto 20px;
+  display: block;
+  background-color: #3f51b5;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.load-more:hover {
+  background-color: #32408f;
 }
 
 .hidden {
