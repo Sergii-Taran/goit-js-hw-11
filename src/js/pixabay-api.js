@@ -12,11 +12,5 @@ export function getImagesByQuery(query) {
     safesearch: 'true',
   };
 
-  return axios
-    .get(BASE_URL, { params })
-    .then(response => response.data)
-    .catch(error => {
-      console.error('Error fetching images:', error);
-      throw error;
-    });
+  return axios.get(BASE_URL, { params }).then(response => response.data);
 }
